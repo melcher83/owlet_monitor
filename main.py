@@ -175,7 +175,7 @@ def record_vitals(p):
             if mov != 'wiggling':
                 video=('text=Heart Rate: ' + heart + '\\nOxygen: ' + oxy +"\\nMovement: " + mov + '\nduration=60')
             else:
-                video = ('text= Levi is wiggling and not giving us good data')
+                video = ('text= Levi is wiggling and not giving us good data\nduration=60')
             record(video)
             #record(oxy)
         else:
