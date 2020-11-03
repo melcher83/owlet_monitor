@@ -167,8 +167,8 @@ def record_vitals(p):
             # base station was intentionally turned on, the sock is presumably
             # on the baby's foot, so we can trust heart and oxygen levels
             disp += heart + ", " + oxy + ", " + mov + ", " + device_sn
-            record(log("Heart Rate: " + str(heart)))
-            record(log("Oxygen: " + str(oxy)))
+            record(heart)
+            record(oxy)
         else:
             raise FatalError("Unexpected base_station_on=%d" % base_station_on)
     log("Heart Rate: " + heart)
