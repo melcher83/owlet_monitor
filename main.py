@@ -173,7 +173,7 @@ def record_vitals(p):
             # on the baby's foot, so we can trust heart and oxygen levels
             disp += heart + ", " + oxy + ", " + mov + ", " + device_sn
 
-            video=('text=Heart Rate: ' + heart + '\\nOxygen: ' + oxy + '\nduration=60')
+            video=('text=Heart Rate: ' + heart + '\\nOxygen: ' + oxy +"\\nMovement: " + mov + '\nduration=60')
             record(video)
             #record(oxy)
         else:
