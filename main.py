@@ -180,7 +180,7 @@ def loop():
     global sess
     sess = requests.session()
     x=0
-    while x < 3:
+    while x < 1:
         try:
             login()
             fetch_dsn()
