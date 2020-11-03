@@ -172,8 +172,10 @@ def record_vitals(p):
             # base station was intentionally turned on, the sock is presumably
             # on the baby's foot, so we can trust heart and oxygen levels
             disp += heart + ", " + oxy + ", " + mov + ", " + device_sn
-
-            video=('text=Heart Rate: ' + heart + '\\nOxygen: ' + oxy +"\\nMovement: " + mov + '\nduration=60')
+            if mov != 'wiggling':
+                video=('text=Heart Rate: ' + heart + '\\nOxygen: ' + oxy +"\\nMovement: " + mov + '\nduration=60')
+            else:
+                video = ('text= Levi is wiggling and not giving us good data')
             record(video)
             #record(oxy)
         else:
