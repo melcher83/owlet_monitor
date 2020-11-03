@@ -163,6 +163,8 @@ def record_vitals(p):
             # heart and oxygen levels appear to be reported, but we can't
             # yet assume the sock was placed on the baby's foot.
             disp += "sock not charging, base station off"
+            heart = 'Charging'
+            oxy = 'Charging'
         elif base_station_on == 1:
             # base station was intentionally turned on, the sock is presumably
             # on the baby's foot, so we can trust heart and oxygen levels
