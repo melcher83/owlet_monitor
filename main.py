@@ -168,7 +168,7 @@ def record_vitals(p):
             # on the baby's foot, so we can trust heart and oxygen levels
             disp += heart + ", " + oxy + ", " + mov + ", " + device_sn
 
-            video=('text=Heart Rate: ' + heart + '\n' + 'Oxygen: ' + oxy)
+            video=('text=Heart Rate: ' + heart + '\\nOxygen: ' + oxy + '\nduration=0')
             record(video)
             #record(oxy)
         else:
@@ -179,7 +179,8 @@ def record_vitals(p):
 def loop():
     global sess
     sess = requests.session()
-    while True:
+    x=0
+    while x < 3:
         try:
             login()
             fetch_dsn()
@@ -190,6 +191,7 @@ def loop():
             log('Network error: %s' % e)
             time.sleep(1)
             sess = requests.session()
+        x+=1
 
 def main():
     try:
